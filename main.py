@@ -4,6 +4,9 @@ from flask import Flask, render_template
 import openai
 import core_functions
 import assistant
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
