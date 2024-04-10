@@ -89,7 +89,7 @@ def create_assistant(client, tool_data):
     assistant = client.beta.assistants.create(
         instructions=get_assistant_instructions(),
         name=assistant_name,
-        model=os.getenv("GPT-3.5 Turbo"),
+        model=os.getenv("OPENAI_MODEL"),
         tools=[{
             "type": "retrieval"
         }] + tool_data["tool_configs"],
